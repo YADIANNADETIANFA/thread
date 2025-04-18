@@ -48,3 +48,20 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+"""
+with lock:
+
+等价于
+
+lock.acquire()
+try:
+    # 临界区，线程安全，do_something
+finally:
+    lock.release()
+
+如果涉及多个锁的操作，或者临界区处理复杂，可使用方式2
+否则，使用方式1
+
+"""
